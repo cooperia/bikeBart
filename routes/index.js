@@ -7,8 +7,7 @@ var statList;
 
 //Main page - no form submission
 exports.index = function(req, res){
-	
-	
+	console.log(res);
 	infoProvider.getList(function(err, list){
 		statList = list;
 		//Fill the object that will be used to populate the dropdown
