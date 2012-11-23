@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+	<!--
+	/* @license
+	 * MyFonts Webfont Build ID 1575749, 2011-11-28T11:12:34-0500
+	 * 
+	 * The fonts listed in this notice are subject to the End User License
+	 * Agreement(s) entered into by the website owner. All other parties are 
+	 * explicitly restricted from using the Licensed Webfonts(s).
+	 * 
+	 * You may obtain a valid license at the URLs below.
+	 * 
+	 * Webfont: PF Din Text Pro Regular by Parachute
+	 * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-pro/regular/
+	 * Licensed pageviews: 7,000,000
+	 * 
+	 * Webfont: PF Din Text Pro Medium by Parachute
+	 * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-pro/medium/
+	 * Licensed pageviews: unspecified
+	 * 
+	 * Webfont: PF Din Text Pro Bold by Parachute
+	 * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-pro/bold/
+	 * Licensed pageviews: unspecified
+	 * 
+	 * Webfont: PF Din Text Pro Light by Parachute
+	 * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-pro/light/
+	 * Licensed pageviews: unspecified
+	 * 
+	 * Webfont: PF Din Text Pro Extra Thin by Parachute
+	 * URL: http://www.myfonts.com/fonts/parachute/pf-din-text-pro/extra-thin/
+	 * Licensed pageviews: unspecified
+	 * 
+	 * 
+	 * License: http://www.myfonts.com/viewlicense?type=web&buildid=1575749
+	 * Webfonts copyright: Copyright (c) 2002, 2005 Parachute&#x00A8;, www.parachute.gr. 
+	 * All rights reserved.
+	 * 
+	 * © 2011 Bitstream Inc
+	*/
+
+	-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/MyFontsWebfontsOrderM3187096.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel='stylesheet' href='/stylesheets/style.mine.css' />
+	<link rel='stylesheet' media="all and (max-width: 850px)" href='/stylesheets/style.mine-med.css' />
+	<link rel='stylesheet' media="all and (max-width: 650px)" href='/stylesheets/style.mine-small.css' />
+	<!--No native IE9 support for media queries makes me sad. Hacks also make me sad.-->
+	<script type='text/javascript' src='/javascripts/jquery-1.7.1.js' ></script>
+	<script type='text/javascript' src='/javascripts/clock.js' ></script>
+	
+  </head>
+  <body>
+	<div id="wrapper" class="box">
+		<div id="header" class="box contentBlock">
+			<h1 class="headerText">CAN I BRING MY<span id="bike" class="bike2"></span>ON <span class="headerBART">BART</span></h1>
+			<p>Because finding this info on BART's website is extremely hard and sucky.  Life should be funner.
+		</div>
+		<div id="body" class="box contentBlock">
+			<div>It's currently <span id="hour" class="time"></span><span id="colon" class="time">:</span><span id="minute" class="time"></span>, so if you're leaving from 
+			<!--Generate form -->
+			<form id="stationForm" method="post">
+				<select name="stn" onchange="$('#stationForm').submit()">
+					<% for(propt in stations){
+						if(typeof(selected) != 'undefined' && selected == stations[propt].abbr){ %>
+							<option value="<%= stations[propt].abbr %>" selected="selected"><%= stations[propt].name %></option>
+						<% }else{ %>
+						<option value="<%= stations[propt].abbr %>"><%= stations[propt].name %></option>
+					<% }
+					} %>
+				</select>
+			</form>,
+			<!--Decide if biking is legal -->
+			<% if(destinations != ''){
+				if(destinations[0].estimate[0].bikeflag == 0){ %>
+					<p class="fail">You're going to have to cool your jets</p>
+
+				<% }else{ %>
+					<p class="success">better mount up rough rider.</p>
+
+			<%  }
+			   }%>
+			</div>
+		</div>
+		<div id="footer" class="box contentBlock">
+			<div class="floatLeft">
+				<p>a <span id="footChops">Cherdaberkindekin</p>
+				<p>copyleft 2012</p>
+			</div>
+			<div class="floatRight">
+				<p class="textRight">99 riders served</p>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+	
+	
+  </body>
+</html>

@@ -1,0 +1,240 @@
+/*Some Zeroing*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html, body {
+	height:100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1em;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+div {
+	position:relative;
+}
+
+figure img {
+	width:inherit;
+	max-width:100%; 
+	height:auto;
+	width:auto;
+}
+
+p {
+	margin:10px 0em;
+}
+
+/*End Zeroing*/
+
+/*Generic*/
+
+.hidden {
+	visibility:hidden;
+}
+
+.box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#wrapper {
+	width:100%;
+	padding-top:65px;
+}
+
+.floatLeft {
+	float:left;
+}
+
+textRight {
+	text-align:right;
+}
+
+.floatRight {
+	float:right;
+}
+
+.contentBlock {
+	max-width:800px;
+	min-width:760px;
+	margin:0px auto;
+}
+
+/*Header*/
+
+#header {
+	border-bottom:1px solid #d1d1d1;
+	margin-bottom:110px;
+}
+
+h1.headerText {
+	font-family:PFDinTextPro-Bold, helvetica, arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size:55px;
+	color:#009ada;
+	letter-spacing:-.75px;
+}
+
+span.headerBART {
+	color:#000000;
+}
+
+span#bike {
+	width:134px;
+	height:80px;
+	display:inline-block;
+	background-image:url('/images/bikes.gif');
+}
+
+span.bike1 {
+	background-position:top;
+}
+
+span.bike2 {
+	background-position:bottom;
+}
+
+#header p {
+	font-family: PFDinTextPro-Regular, helvetica, arial, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+	color:#8c8c8c;
+	font-size:15.5px;
+}
+
+/*Body*/
+
+#body {
+	margin:0px auto 110px auto ;
+	line-height:74px;
+}
+
+#body div, body p {
+	font-family: PFDinTextPro-Light;
+	font-weight: normal;
+	font-style: normal;
+	font-size:52px;
+	color:#5c5c5c;	
+}
+
+select {
+	font-size:22px;
+	height:52px;
+	color:#8e8e8e;
+	font-family:arial, sans-serif;
+	font-style:italic;
+	border-color:#ccc;
+	padding:10px;
+}
+
+/*We call this being bullish*/
+option {
+	font-size:22px;
+	height:52px;
+	color:#8e8e8e;
+	font-family:arial, sans-serif;
+	font-style:italic;
+}
+
+input, select{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#body form {
+	vertical-align:text-bottom;
+	display:inline-block;
+	
+}
+
+span.time {
+	color:#6caec9;
+}
+
+p.success {
+	color:#8bbb18;
+	font-style: italic;
+}
+
+p.fail {
+	color:#c55200;
+	font-style: italic;
+}
+
+
+/*Footer*/
+
+#footer {
+	border-top: 1px solid #d1d1d1;
+	padding-top:10px;
+}
+
+div#footer p {
+	font-family: PFDinTextPro-Regular, arial, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+	font-size:13px;
+	line-height:17px;
+	color:#a3a3a3;
+	margin:0;
+}
+
+#footChops {
+	color:#5d5d5d;
+}
+
+#logoMini {
+	display:inline-block;
+	width:65px;
+	height:15px;
+	vertical-align:text-bottom;
+}
+
+/*This font may be a design oversight but hey, I might as well stick as close to the design as possible, right?*/
+#footer.floatLeft {
+	font-family:arial, sans-serif;
+}
+
+
+
