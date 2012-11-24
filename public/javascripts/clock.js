@@ -1,37 +1,9 @@
 $(function(){
+  
 	var date = new Date(),
 	hour,
 	minute;
 	
-	Date.prototype.formatHours = function(){
-		var hour = this.getHours();
-		if(hour > 12){
-			hour = hour - 12;
-		}
-		else if(hour == 0){
-			hour = 12;
-		}
-		return hour;
-	};
-	
-	Date.prototype.formatMinutes = function(){
-		var minute = this.getMinutes();
-		if(minute < 10){
-			minute  = '0'+minute;
-		}
-		return minute;
-	};
-	
-	Date.prototype.getPeriod = function(){
-		var period,
-		hour = this.getHours();
-		if(hour < 12){
-			period = 'AM';
-		}else{
-			period = 'PM'
-		}
-		return period;
-	};
 	
 	//Call getSetTime to start the cycle
 	getSetTime();

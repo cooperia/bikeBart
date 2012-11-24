@@ -157,6 +157,18 @@ span.bike2 {
 	color:#5c5c5c;	
 }
 
+#time_input {
+	font-size:22px;
+	height:52px;
+  width:130px;
+	color:#8e8e8e;
+	font-family:arial, sans-serif;
+	font-style:italic;
+	padding:10px;
+	vertical-align:text-bottom;
+  text-align:right;
+}
+
 select {
 	font-size:22px;
 	height:52px;
